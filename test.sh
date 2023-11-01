@@ -1,7 +1,7 @@
 #!/bin/bash
 # Initialize the variable `var`
-answer=1
-while [ $answer -eq 1 ]; do
+answer="yes"
+while [ $answer = "yes" ]; do
     var=1
     max=30
     max_words=30
@@ -36,10 +36,10 @@ while [ $answer -eq 1 ]; do
         rm file.txt
         mv new_file.txt file.txt
     fi
+    echo "The file has been edited to the following specifications(300 char/150 words/10 lines):"
+    echo "_________________________________"
     cat file.txt
-    echo "Do you want to edit the file more? (1/0)"
+    echo "---------------------------------"
+    echo "Do you want to edit the file more? (yes/no)"
     read answer
-    if [ $answer -eq 0 ]; then
-        break
-    fi
 done
