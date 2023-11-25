@@ -9,8 +9,6 @@ if [ -z "$1" ]; then
     echo "No argument provided."
 elif [ $# -gt 1 ]; then
     echo "Too many arguments provided."
-elif [ -f "$1" ]; then
-    echo "File found: $1"
 elif [ -d "$1" ]; then
     ls "$1"
 elif [ -x "$1" ]; then
